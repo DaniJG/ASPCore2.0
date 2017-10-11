@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<h1>Todo list</h1>
+<ul class="list-unstyled">
+    @foreach (var todo in Model.Todos)
+    {
+        <li>
+            <p>@todo.Title - @todo.Description</p>
+        </li>
+    }
+</ul>
+
+<a asp-page="./Create">Add another</a>

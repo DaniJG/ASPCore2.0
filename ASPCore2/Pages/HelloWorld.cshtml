@@ -1,0 +1,13 @@
+﻿@page "{id:int}"
+@model HelloWorldModel
+@{
+    ViewData["Title"] = "Hello World Page";
+}
+<h1>Hello World! @Model.Id</h1>
+<p>The server time is @Model.ServerTime</p>
+<p>The server files are located at @Model.PhysicalPath</p>
+
+<ul>
+    <li>@Url.Page("HelloWorld", new {id = 100})</li>
+    <li><a asp-page="/HelloWorld" asp-route-id="100">My Index Page</a></li>
+</ul>
